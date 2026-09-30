@@ -221,3 +221,6 @@ __marimo__/
 calibrations.csv
 config.yml
 sensors.xlsx
+
+# Settings
+.vscode

@@ -7,19 +7,18 @@ Created on Wed Sep 30 06:25:18 2026
 """
 
 import json
-from pathlib import Path
 
 import pandas as pd
 
-# Importing data from yml file
+# Importing- and formating data from config.yml file
 with open("config.yml") as file:
     config = file.readlines()
     max_days_since = config[0].split(": ")[1].strip()
     output_file = config[1].split(": ")[1].strip('"')
 
-# Importing- and merging data from csv and excel files
+# Importing- and merging data from calibrations.csv and sensors.xlsx
 calibrations_df = pd.read_csv("calibrations.csv")
-sensors_df = pd.read_excel("sensors.xlsx")  # (I had to add openpyxl to the venv)
+sensors_df = pd.read_excel("sensors.xlsx")  # (Had to add openpyxl to the venv)
 sensor_data = pd.merge(sensors_df, calibrations_df, on="sensor_id")
 
 # Filtering- and reformating the dataframe so it can be used in json.dump
