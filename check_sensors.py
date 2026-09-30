@@ -27,5 +27,5 @@ overdue_sensors = sensor_data[sensor_data["days_since_calibration"] > int(max_da
 overdue_sensors = overdue_sensors.to_dict(orient='records')
 
 # Make a Json file and write down the data
-with open(Path(__file__).parent / output_file, 'w') as file:
+with open(output_file, 'w') as file:
     json.dump(overdue_sensors, file, indent=2)

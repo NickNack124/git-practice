@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Provided data
+calibrations.csv
+config.yml
+sensors.xlsx
