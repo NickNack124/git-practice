@@ -12,6 +12,8 @@ Required input files:
 - sensors.xlsx
 - config.yml
 
+The input files must be in same repository, or at least same parent folder.
+
 The input data files are not included in this repository.
 
 The resulting JSON file should appear in the repository.
