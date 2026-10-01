@@ -2,7 +2,7 @@
 This repository contains two scripts:
 
 - hello.py;
-    a test script that just says hello
+    a test script that just prints "Hello, Git!"
 
 - check_sensors.py; 
     a script that checks whether certain sensor readings meet a certain threshold, and appends the ones that do to a json array.
